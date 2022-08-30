@@ -46,7 +46,7 @@ const style = StyleSheet.create({
     lineHeight: 21,
     fontWeight: "bold",
     letterSpacing: 0.25,
-    color: "white",
+    color: "gray",
     // padding: 5,
   },
 });

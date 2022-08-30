@@ -1,91 +1,50 @@
 import React from "react";
-import {
-  SafeAreaView,
-  View,
-  ScrollView,
-  StyleSheet,
-  StatusBar,
-} from "react-native";
-import Customer from "./Customer";
-
+import { View, Text, StyleSheet, ScrollView, FlatList } from "react-native";
 const Customers = () => {
+  const languages = [
+    { name: "Pascal", key: "1" },
+    { name: "C", key: "2" },
+    { name: "C++", key: "3" },
+    { name: "Java", key: "4" },
+    { name: "JavaScript", key: "5" },
+    { name: "Go", key: "6" },
+    { name: "Kotlin", key: "7" },
+    { name: "Swift", key: "8" },
+  ];
+
   return (
-    <SafeAreaView style={style.scroll}>
-      <ScrollView style={style.scrollView}>
-        <View style={style.container}>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-          <Customer></Customer>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <FlatList
+        data={languages}
+        renderItem={({ item }) => <Text style={styles.item}>{item.name}</Text>}
+      />
+    </View>
+
+    // <View style={styles.container}>
+    //   <ScrollView>
+    //     {languages.map((lang) => (
+    //       <View key={lang.key}>
+    //         <Text style={styles.item}>{lang.name}</Text>
+    //       </View>
+    //     ))}
+    //   </ScrollView>
+    // </View>
   );
 };
-const style = StyleSheet.create({
+
+const styles = StyleSheet.create({
   container: {
-    flexDirection: "column",
-    // flexWrap: "wrap",
-    // alignItems: "center",
-    // alignContent: "center",
-  },
-  scroll: {
     flex: 1,
-    paddingTop: StatusBar.currentHeight,
+    backgroundColor: "#fff",
+    paddingTop: 40,
+    // paddingHorizontal: 20,
   },
-
-  scrollView: {
-    marginHorizontal: 5,
+  item: {
+    marginTop: 20,
+    padding: 30,
+    backgroundColor: "#ffc600",
+    fontSize: 24,
   },
-
-  // btnStyle: {
-  //   alignItems: "center",
-  //   justifyContent: "center",
-  //   paddingVertical: 15,
-  //   paddingHorizontal: 32,
-  //   borderRadius: 10,
-  //   elevation: 3,
-  //   backgroundColor: "#0056b3",
-  //   margin: 15,
-  // },
-  // text: {
-  //   fontSize: 18,
-  //   lineHeight: 21,
-  //   fontWeight: "bold",
-  //   letterSpacing: 0.25,
-  //   color: "white",
-  // },
 });
 
 export default Customers;
