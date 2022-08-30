@@ -8,22 +8,11 @@ import CustomerDetail from "./src/components/customers/infraStructure/CustomerDe
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ClientDto from "./src/components/customers/domain/ClientDto";
-import Pedido from "./src/components/customers/infraStructure/Pedido";
-
-// const Stack = createNativeStackNavigator();
-
-// function HomeScreen() {
-//   return (
-//     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-//       <Text>Home</Text>
-//     </View>
-//   );
-// }
+import Pedido from "./src/components/oders/Infraestructure/Pedido";
+import Dropdown from "./src/core/Dropdow";
 
 export default function App() {
   return (
-    // <NavigationContainer>
-    //   <Stack.Navigator>
     <View style={styles.container}>
       {/* <Image
         source={{ uri: "imgs:/ypf.png" }}
@@ -31,6 +20,7 @@ export default function App() {
       /> */}
 
       <Text>
+        {/* <Dropdown></Dropdown> */}
         <Pedido></Pedido>
         {/* <ClientDto></ClientDto> */}
         {/* <CustomerDetail></CustomerDetail> */}
@@ -38,12 +28,9 @@ export default function App() {
         {/* <Customers></Customers> */}
         {/* <Customer></Customer> */}
       </Text>
-      {/* <Stack.Screen name="Home" component={HomeScreen} /> */}
-      {/* <Stack.Screen name="Customers" component={Customers} /> */}
+
       <StatusBar style="auto" />
     </View>
-    //   </Stack.Navigator>
-    // </NavigationContainer>
   );
 }
 

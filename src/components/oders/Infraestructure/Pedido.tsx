@@ -2,11 +2,20 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet, Pressable } from "react-native";
 import { DataTable, RadioButton } from "react-native-paper";
 import { Col, Row, Grid } from "react-native-easy-grid";
-// import RNPickerSelect from "react-native-picker-select";
+// import SelectList from 'react-native-dropdown-select-list'
 
 const Pedido = () => {
+  //   const [selected, setSelected] = React.useState<any>("")
+
+  //   const data =[
+  //     {key:"1", value:"diesel1"},
+  //     {key:"2", value:"diesel2"},
+  //     {key:"3", value:"nafta1"},
+  //     {key:"4", value:"nafta2"},
+  // ]
+
   const [checked, setChecked] = React.useState("first");
-  // const [language, setLanguage] = useState("");
+
   return (
     <View>
       <View>
@@ -40,23 +49,9 @@ const Pedido = () => {
         </View>
       </View>
 
-      {/* <View style={styles.select}>
-        <Text>
-          {language
-            ? `My favourite language is ${language}`
-            : "Please select a language"}
-        </Text>
-        <RNPickerSelect
-          onValueChange={(value) => console.log(value)}
-          items={[
-            { label: "JavaScript", value: "JavaScript" },
-            { label: "TypeScript", value: "TypeScript" },
-            { label: "Python", value: "Python" },
-            { label: "Java", value: "Java" },
-            { label: "C++", value: "C++" },
-            { label: "C", value: "C" },
-          ]}
-        />
+      {/* <View style={{paddingHorizontal:20, paddingVertical:50, flex:1 }}>
+        <SelectList  data={data} setSelected={setSelected}/>
+
       </View> */}
 
       <View style={styles.container}>
