@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   Text,
   View,
@@ -10,12 +11,11 @@ import {
 
 const Home = () => {
   return (
-    <View>
+    <View style={{ flex: 1, justifyContent: "center" }}>
       <View>
         <Image
-          source={{
-            uri: "https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c325.png",
-          }}
+          source={require("../imgs/ypf.png")}
+          style={{ width: 100, height: 100 }}
         />
       </View>
 
@@ -29,7 +29,7 @@ const Home = () => {
         <Text style={style.text}>MOSTRAR CLIENTES</Text>
       </Pressable>
       <Pressable style={style.btnStyle}>
-        <Text style={style.text}>INGRESO STOCK</Text>
+        <Text style={style.text}>INGRESO </Text>
       </Pressable>
     </View>
   );
@@ -45,6 +45,12 @@ const style = StyleSheet.create({
     elevation: 3,
     backgroundColor: "#0056b3",
     margin: 15,
+  },
+  img: {
+    justifyContent: "center",
+    marginBottom: 50,
+    width: 50,
+    height: 50,
   },
   text: {
     fontSize: 18,

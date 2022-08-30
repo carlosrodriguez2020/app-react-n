@@ -29,6 +29,7 @@ const style = StyleSheet.create({
     flexWrap: "wrap",
     alignItems: "center",
     // alignContent: "center",
+    padding: 5,
   },
   btnStyle: {
     alignItems: "center",
@@ -46,6 +47,7 @@ const style = StyleSheet.create({
     fontWeight: "bold",
     letterSpacing: 0.25,
     color: "white",
+    // padding: 5,
   },
 });
 

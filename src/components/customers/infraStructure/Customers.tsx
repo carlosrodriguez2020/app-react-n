@@ -1,12 +1,31 @@
 import React from "react";
-import { SafeAreaView, View, ScrollView, StyleSheet } from "react-native";
+import {
+  SafeAreaView,
+  View,
+  ScrollView,
+  StyleSheet,
+  StatusBar,
+} from "react-native";
 import Customer from "./Customer";
 
 const Customers = () => {
   return (
-    <SafeAreaView>
-      <ScrollView>
+    <SafeAreaView style={style.scroll}>
+      <ScrollView style={style.scrollView}>
         <View style={style.container}>
+          <Customer></Customer>
+          <Customer></Customer>
+          <Customer></Customer>
+          <Customer></Customer>
+          <Customer></Customer>
+          <Customer></Customer>
+          <Customer></Customer>
+          <Customer></Customer>
+          <Customer></Customer>
+          <Customer></Customer>
+          <Customer></Customer>
+          <Customer></Customer>
+          <Customer></Customer>
           <Customer></Customer>
           <Customer></Customer>
           <Customer></Customer>
@@ -41,6 +60,15 @@ const style = StyleSheet.create({
     // alignItems: "center",
     // alignContent: "center",
   },
+  scroll: {
+    flex: 1,
+    paddingTop: StatusBar.currentHeight,
+  },
+
+  scrollView: {
+    marginHorizontal: 5,
+  },
+
   // btnStyle: {
   //   alignItems: "center",
   //   justifyContent: "center",
