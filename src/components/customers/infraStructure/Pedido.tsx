@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet, Pressable } from "react-native";
 import { DataTable, RadioButton } from "react-native-paper";
 import { Col, Row, Grid } from "react-native-easy-grid";
-import RNPickerSelect from "react-native-picker-select";
+// import RNPickerSelect from "react-native-picker-select";
 
 const Pedido = () => {
   const [checked, setChecked] = React.useState("first");
-  const [language, setLanguage] = useState("");
+  // const [language, setLanguage] = useState("");
   return (
     <View>
       <View>
@@ -40,7 +40,7 @@ const Pedido = () => {
         </View>
       </View>
 
-      <View style={styles.select}>
+      {/* <View style={styles.select}>
         <Text>
           {language
             ? `My favourite language is ${language}`
@@ -57,7 +57,7 @@ const Pedido = () => {
             { label: "C", value: "C" },
           ]}
         />
-      </View>
+      </View> */}
 
       <View style={styles.container}>
         <Grid>
