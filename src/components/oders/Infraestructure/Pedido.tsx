@@ -2,17 +2,10 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet, Pressable } from "react-native";
 import { DataTable, RadioButton } from "react-native-paper";
 import { Col, Row, Grid } from "react-native-easy-grid";
-// import SelectList from 'react-native-dropdown-select-list'
+import SelectDropdown from "react-native-select-dropdown";
 
 const Pedido = () => {
-  //   const [selected, setSelected] = React.useState<any>("")
-
-  //   const data =[
-  //     {key:"1", value:"diesel1"},
-  //     {key:"2", value:"diesel2"},
-  //     {key:"3", value:"nafta1"},
-  //     {key:"4", value:"nafta2"},
-  // ]
+  const producto = ["Diesel1", "Diesel2", "Nafta1", "Nafta"];
 
   const [checked, setChecked] = React.useState("first");
 
@@ -26,7 +19,7 @@ const Pedido = () => {
       </View>
 
       <Pressable style={styles.btnStyle}>
-        <Text style={styles.text}>AGREGAR PEDIDO </Text>
+        <Text style={styles.text}>AGREGAR PEDIDO + </Text>
       </Pressable>
 
       <View>
@@ -49,39 +42,54 @@ const Pedido = () => {
         </View>
       </View>
 
-      {/* <View style={{paddingHorizontal:20, paddingVertical:50, flex:1 }}>
-        <SelectList  data={data} setSelected={setSelected}/>
-
-      </View> */}
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "center",
+        }}
+      >
+        <SelectDropdown
+          data={producto}
+          onSelect={(selectedItem, index) => {
+            console.log(selectedItem, index);
+          }}
+          buttonTextAfterSelection={(selectedItem, index) => {
+            return selectedItem;
+          }}
+          rowTextForSelection={(item, index) => {
+            return item;
+          }}
+        />
+      </View>
 
       <View style={styles.container}>
         <Grid>
           <Col size={50}>
-            <Row style={styles.cell}>
+            {/* <Row style={styles.cell}>
               <Text style={styles.textThead}>Productos</Text>
             </Row>
             <Row style={styles.cell}>
-              <Text>B</Text>
+              <Text>dropdown</Text>
             </Row>
             <Row style={styles.cell}>
-              <Text>C</Text>
+              <Text>dropdown</Text>
             </Row>
             <Row style={styles.cell}>
-              <Text>D</Text>
-            </Row>
+              <Text>dropdown</Text>
+            </Row> */}
           </Col>
           <Col size={25}>
             <Row style={styles.cell}>
               <Text style={styles.textThead}>Cod Auth</Text>
             </Row>
             <Row style={styles.cell}>
-              <Text>1231</Text>
+              <Text style={styles.textTable}>4444</Text>
             </Row>
             <Row style={styles.cell}>
-              <Text>321</Text>
+              <Text style={styles.textTable}>321</Text>
             </Row>
             <Row style={styles.cell}>
-              <Text>421</Text>
+              <Text style={styles.textTable}>421</Text>
             </Row>
           </Col>
           <Col size={25}>
@@ -89,13 +97,13 @@ const Pedido = () => {
               <Text style={styles.textThead}>Cantidad</Text>
             </Row>
             <Row style={styles.cell}>
-              <Text>123</Text>
+              <Text style={styles.textTable}>123</Text>
             </Row>
             <Row style={styles.cell}>
-              <Text>1323</Text>
+              <Text style={styles.textTable}>1323</Text>
             </Row>
             <Row style={styles.cell}>
-              <Text>4444</Text>
+              <Text style={styles.textTable}>4444</Text>
             </Row>
           </Col>
         </Grid>
@@ -109,10 +117,13 @@ const Pedido = () => {
 const styles = StyleSheet.create({
   container: {
     width: "100%",
-    height: 400,
+    height: 300,
     padding: 16,
     paddingTop: 50,
     backgroundColor: "#fff",
+  },
+  textTable: {
+    fontSize: 20,
   },
   select: {
     backgroundColor: "#fff",
@@ -148,7 +159,7 @@ const styles = StyleSheet.create({
   textThead: {
     fontWeight: "bold",
     padding: 5,
-    fontSize: 15,
+    fontSize: 20,
   },
   sectionRadioBtn: {
     flexDirection: "row",

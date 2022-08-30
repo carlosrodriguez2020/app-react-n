@@ -21,11 +21,11 @@ export default function App() {
 
       <Text>
         {/* <Dropdown></Dropdown> */}
-        <Pedido></Pedido>
+        {/* <Pedido></Pedido> */}
         {/* <ClientDto></ClientDto> */}
         {/* <CustomerDetail></CustomerDetail> */}
         {/* <Home></Home> */}
-        {/* <Customers></Customers> */}
+        <Customers></Customers>
         {/* <Customer></Customer> */}
       </Text>
 
