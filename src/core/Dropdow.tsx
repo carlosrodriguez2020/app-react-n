@@ -15,11 +15,7 @@ const Dropdown: FC<Props> = ({ label }) => {
 
   const renderDropdown = () => {
     if (visible) {
-      return (
-        <Text style={styles.dropdown}>
-          This is where the dropdown will be rendered.
-        </Text>
-      );
+      return <Text style={styles.dropdown}>Productos</Text>;
     }
   };
 
