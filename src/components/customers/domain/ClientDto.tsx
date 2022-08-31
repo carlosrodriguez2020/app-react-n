@@ -1,16 +1,14 @@
-import React from "react";
-
-interface DtoClient {
+export interface DtoClient {
   nombre: string;
   idCliente: number;
   direccion: string;
   localidad: string;
   provincia: string;
-  condicionIVA: string;
-  obsrvaciones: string;
+  condicionIVA?: string;
+  obsrvaciones?: string;
 }
 
-const dtoClient = {
+export const dtoClient: DtoClient = {
   nombre: "Carlos",
   idCliente: 12,
   direccion: "G. Paz",

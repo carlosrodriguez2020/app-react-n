@@ -1,14 +1,31 @@
 import React from "react";
 import { Text, View, Pressable, StyleSheet } from "react-native";
+import { DtoClient } from "../domain/ClientDto";
 
 const CustomerDetail = () => {
+  const dto: DtoClient = {
+    nombre: "",
+    idCliente: 0,
+    direccion: "",
+    localidad: "",
+    provincia: "",
+  };
+
+  const client: DtoClient = {
+    nombre: "carlos",
+    idCliente: 0,
+    direccion: "123",
+    localidad: "tucu",
+    provincia: "jujuy",
+  };
+
   return (
     <View>
       {/* <Text style={style.text}>Clientes</Text> */}
       <Text style={style.sectionTitle}>Detalle del Cliente</Text>
       <View>
         <View style={style.container}>
-          <Text style={style.text}>Nombre:Carlos Rodriguez</Text>
+          <Text style={style.text}>Nombre:{client.nombre}</Text>
           <Text style={style.text}>CUIT: 21 36456654 9</Text>
           <Text style={style.text}>Ciudad : S M de Tucuman</Text>
           <Text style={style.text}>Provincia : S M de Tucuman</Text>
@@ -68,7 +85,7 @@ const style = StyleSheet.create({
     lineHeight: 21,
     fontWeight: "bold",
     letterSpacing: 0.25,
-    color: "white",
+    color: "black",
     margin: 5,
     paddingLeft: 20,
   },

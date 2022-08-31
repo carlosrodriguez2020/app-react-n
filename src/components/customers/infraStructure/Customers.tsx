@@ -28,16 +28,6 @@ const Customers = () => {
         renderItem={({ item }) => <Text style={styles.item}>{item.name}</Text>}
       />
     </SafeAreaView>
-
-    // <View style={styles.container}>
-    //   <ScrollView>
-    //     {languages.map((lang) => (
-    //       <View key={lang.key}>
-    //         <Text style={styles.item}>{lang.name}</Text>
-    //       </View>
-    //     ))}
-    //   </ScrollView>
-    // </View>
   );
 };
 

@@ -8,8 +8,10 @@ import CustomerDetail from "./src/components/customers/infraStructure/CustomerDe
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ClientDto from "./src/components/customers/domain/ClientDto";
-import Pedido from "./src/components/oders/Infraestructure/Pedido";
 import Dropdown from "./src/core/Dropdow";
+// import ProductList from "./src/components/products/infraestructure/ProductList";
+import Products from "./src/components/products/infraestructure/Products";
+import Orders from "./src/components/orders/Infraestructure/Orders";
 
 export default function App() {
   return (
@@ -20,12 +22,14 @@ export default function App() {
       /> */}
 
       <Text>
+        {/* <Orders></Orders> */}
+        <Products></Products>
         {/* <Dropdown></Dropdown> */}
         {/* <Pedido></Pedido> */}
         {/* <ClientDto></ClientDto> */}
         {/* <CustomerDetail></CustomerDetail> */}
         {/* <Home></Home> */}
-        <Customers></Customers>
+        {/* <Customers></Customers> */}
         {/* <Customer></Customer> */}
       </Text>
 
