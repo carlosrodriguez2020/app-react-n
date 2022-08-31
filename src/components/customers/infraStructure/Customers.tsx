@@ -1,24 +1,33 @@
 import React from "react";
-import { View, Text, StyleSheet, ScrollView, FlatList } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  FlatList,
+  SafeAreaView,
+} from "react-native";
 const Customers = () => {
   const languages = [
     { name: "Pascal", key: "1" },
     { name: "C", key: "2" },
-    { name: "C++", key: "3" },
+    { name: "C+", key: "3" },
     { name: "Java", key: "4" },
     { name: "JavaScript", key: "5" },
     { name: "Go", key: "6" },
     { name: "Kotlin", key: "7" },
     { name: "Swift", key: "8" },
+    { name: "Kotlin", key: "9" },
+    { name: "Swift", key: "10" },
   ];
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <FlatList
         data={languages}
         renderItem={({ item }) => <Text style={styles.item}>{item.name}</Text>}
       />
-    </View>
+    </SafeAreaView>
 
     // <View style={styles.container}>
     //   <ScrollView>
