@@ -20,6 +20,7 @@ const Style = StyleSheet.create({
         fontWeight: "bold",
         letterSpacing: 0.25,
         color: "Black",
+        margin: 10
     }
 
 })

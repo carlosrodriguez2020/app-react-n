@@ -29,12 +29,15 @@ const DropDown = () => {
 }
 const style = StyleSheet.create({
   containerDrop: {
-    flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'column',
-    marginBottom: 20
+    margin: 20,
+    borderWidth: 2,
+    fontSize: 30,
+    fontWeight: "bold",
+    borderRadius: 10,
+    padding: 5
+
+
 
   }
 })

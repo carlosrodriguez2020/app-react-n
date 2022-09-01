@@ -19,7 +19,7 @@ const CustomerNewOrders = () => {
   console.log("hola");
 
   return (
-    <View style={{ flex: 1, marginHorizontal: 50 }}>
+    <View style={{ padding: 20 }}>
       <TitleCustomersOrders />
 
       <Pressable style={style.btnStyle}>
@@ -57,13 +57,15 @@ const CustomerNewOrders = () => {
 
       <DropDown />
 
-      <View style={{ flexDirection: "column", alignItems: "center" }}>
-        <View>
-          <Text style={style.textTwo}>Codigo/Authe: 8888888</Text>
+      <View style={style.data}>
+        <View style={style.containerTextTwo}>
+          <Text style={style.textTwoTitle}>Codigo/Authe: </Text>
+          <Text style={style.textTwo}>8888888</Text>
         </View>
 
-        <View>
-          <Text style={style.textTwo}>Producto: 8888888</Text>
+        <View style={style.containerTextTwo}>
+          <Text style={style.textTwoTitle}>Producto: </Text>
+          <Text style={style.textTwo}>8888888</Text>
         </View>
       </View>
 
@@ -75,6 +77,17 @@ const CustomerNewOrders = () => {
 };
 
 const style = StyleSheet.create({
+  containerTextTwo: {
+    flexDirection: "row",
+    textAlign: "center",
+    flexWrap: "wrap"
+  },
+  data: {
+    borderWidth: 1,
+    borderRadius: 10,
+    backgroundColor: `#dcdcdc`,
+    flexDirection: "column", alignItems: "center"
+  },
   FilterProdcuts: {
     flexDirection: "row",
     justifyContent: "center",
@@ -98,11 +111,18 @@ const style = StyleSheet.create({
     letterSpacing: 0.25,
     color: "white",
   },
-
-  textTwo: {
-    fontSize: 18,
+  textTwoTitle: {
+    fontSize: 20,
     lineHeight: 21,
     fontWeight: "bold",
+    letterSpacing: 0.25,
+    color: "black",
+    margin: 15
+  },
+
+  textTwo: {
+    fontSize: 20,
+    lineHeight: 21,
     letterSpacing: 0.25,
     color: "black",
     margin: 15
