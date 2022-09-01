@@ -13,7 +13,6 @@ import Dropdown from "./src/core/Dropdow";
 import Products from "./src/components/products/infraestructure/Products";
 import Orders from "./src/components/orders/Infraestructure/Orders";
 import CustomerNewOrders from "./src/components/customers/infraStructure/CustomerNewOrders";
-import TitleCustomersOrders from "./src/core/TitleCustomersOrders";
 
 
 // const Stack = createNativeStackNavigator();
