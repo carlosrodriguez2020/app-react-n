@@ -12,14 +12,15 @@ import {
 const Home = () => {
   return (
     <View style={{ flex: 1, justifyContent: "center" }}>
-      <View>
+      <View style={{ flexDirection: "row", justifyContent: "center" }}>
         <Image
           source={require("../imgs/ypf.png")}
           style={{ width: 100, height: 100 }}
         />
       </View>
 
-      <Pressable style={style.btnStyle}>
+      <Pressable style={style.btnStyle}
+      >
         <Text style={style.text}>PEDIDOS de ENTREGA </Text>
       </Pressable>
       <Pressable style={style.btnStyle}>

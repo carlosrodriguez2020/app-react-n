@@ -12,18 +12,42 @@ import Dropdown from "./src/core/Dropdow";
 // import ProductList from "./src/components/products/infraestructure/ProductList";
 import Products from "./src/components/products/infraestructure/Products";
 import Orders from "./src/components/orders/Infraestructure/Orders";
+import CustomerNewOrders from "./src/components/customers/infraStructure/CustomerNewOrders";
+import TitleCustomersOrders from "./src/core/TitleCustomersOrders";
+
+
+// const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* <Image
-        source={{ uri: "imgs:/ypf.png" }}
-        style={{ width: 40, height: 40 }}
-      /> */}
+      {/* <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={Home} />
+        </Stack.Navigator>
+
+        <Stack.Navigator>
+          <Stack.Screen name="Products" component={Products} />
+        </Stack.Navigator>
+      </NavigationContainer> */}
+
+      {/* pendiente */}
+
+      {/* <Stack.Navigator>
+        <Stack.Screen name="home" component={Home} />
+        <Stack.Screen name="products" component={Products} />
+
+      </Stack.Navigator>
+ */}
+
 
       <Text>
+
+        <CustomerNewOrders />
+        {/* <TitleCustomersOrders></TitleCustomersOrders> */}
+
         {/* <Orders></Orders> */}
-        <Products></Products>
+        {/* <Products></Products> */}
         {/* <Dropdown></Dropdown> */}
         {/* <Pedido></Pedido> */}
         {/* <ClientDto></ClientDto> */}
