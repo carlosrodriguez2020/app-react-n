@@ -1,4 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootStackParamList } from "../../../../screens/RootStackPrams";
+
+type productsScreemProp = NativeStackNavigationProp<RootStackParamList, 'Products'>
+
 import {
   View,
   Text,
@@ -19,6 +25,8 @@ interface CustomersList {
 }
 
 const Products = () => {
+  const navigation = useNavigation<productsScreemProp>()
+
   const [result, setResult] = useState<CustomersList[]>([]);
   const [text, setText] = useState("");
 
@@ -58,7 +66,7 @@ const Products = () => {
           renderItem={({ item }) => (
             <View style={{ flexDirection: "column", justifyContent: "center" }}>
               <Text style={styles.inputText}>Producto: {item.title}</Text>
-              <Text style={styles.inputText}>Detalle: {item.body}</Text>
+              {/* <Text style={styles.inputText}>Detalle: {item.body}</Text> */}
 
               <View>
                 <Pressable style={styles.btnStyle}>
@@ -69,6 +77,11 @@ const Products = () => {
           )}
         />
       </View>
+      <Pressable
+        onPress={() => navigation.navigate('Home')}
+        style={styles.btnStyle}>
+        <Text style={styles.text}>MENU</Text>
+      </Pressable>
     </View>
   );
 };

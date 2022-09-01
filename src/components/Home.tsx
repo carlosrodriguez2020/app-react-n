@@ -1,4 +1,11 @@
 import React from "react";
+import Customers from "./customers/infraStructure/Customers";
+import Products from "./products/infraestructure/Products";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootStackParamList } from "../../screens/RootStackPrams";
+
+type homeScreemProps = NativeStackNavigationProp<RootStackParamList, 'Home'>
 
 import {
   Text,
@@ -9,7 +16,13 @@ import {
   Image,
 } from "react-native";
 
+interface Navi {
+  Products: string
+}
+
 const Home = () => {
+
+  const navigation = useNavigation<homeScreemProps>()
   return (
     <View style={{ flex: 1, justifyContent: "center" }}>
       <View style={{ flexDirection: "row", justifyContent: "center" }}>
@@ -23,11 +36,15 @@ const Home = () => {
       >
         <Text style={style.text}>PEDIDOS de ENTREGA </Text>
       </Pressable>
-      <Pressable style={style.btnStyle}
 
+      <Pressable style={style.btnStyle}
+        onPress={() => navigation.navigate('Products')}
       >
+
         <Text style={style.text}>MOSTRAR PRODUCTOS</Text>
       </Pressable>
+
+
       <Pressable style={style.btnStyle}>
         <Text style={style.text}>MOSTRAR CLIENTES</Text>
       </Pressable>
