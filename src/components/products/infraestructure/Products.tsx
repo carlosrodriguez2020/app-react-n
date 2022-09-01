@@ -50,7 +50,7 @@ const Products = () => {
 
   return (
     <View>
-      {/* <ProductTitle></ProductTitle> */}
+      <ProductTitle></ProductTitle>
       <View>
         <SafeAreaView>
           <TextInput
@@ -82,9 +82,9 @@ const Products = () => {
               </Text>
 
               <View>
-                {/* <Pressable style={style.btnStyle}>
+                <Pressable style={style.btnStyle}>
                   <Text style={style.text}>VER MAS</Text>
-                </Pressable> */}
+                </Pressable>
               </View>
             </View>
           )}
@@ -95,9 +95,7 @@ const Products = () => {
         style={style.btnStyle}>
         <Text style={style.text}>MENU</Text>
       </Pressable>
-      {/* <Pressable style={style.btnStyle}>
-        <Text style={style.text}>VER MAS</Text>
-      </Pressable> */}
+
     </View>
   );
 };

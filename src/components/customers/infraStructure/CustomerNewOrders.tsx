@@ -4,7 +4,16 @@ import TitleCustomersOrders from "../../../core/TitleCustomersOrders";
 import { RadioButton } from "react-native-paper";
 import DropDown from "../../../core/DropDown";
 
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootStackParamList } from "../../../../screens/RootStackPrams";
+
+type custoNewOrderScreemProp = NativeStackNavigationProp<RootStackParamList>
+
 const CustomerNewOrders = () => {
+
+  const navigation = useNavigation<custoNewOrderScreemProp>()
+
   const [checked, setChecked] = React.useState("first");
 
   console.log("hola");

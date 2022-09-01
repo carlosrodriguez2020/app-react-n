@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet } from "react-native";
 
 
-const PoductTitle = () => {
+const DetailClientTitle = () => {
     return (
         <View>
             <Text style={Style.titleText}>
@@ -23,4 +23,4 @@ const Style = StyleSheet.create({
     }
 
 })
-export default PoductTitle;
+export default DetailClientTitle;

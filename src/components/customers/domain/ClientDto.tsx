@@ -5,7 +5,7 @@ export interface DtoClient {
   localidad: string;
   provincia: string;
   condicionIVA?: string;
-  obsrvaciones?: string;
+  observaciones?: string;
 }
 
 export const dtoClient: DtoClient = {
@@ -15,7 +15,7 @@ export const dtoClient: DtoClient = {
   localidad: "Tucuman",
   provincia: "Tucuman",
   condicionIVA: "RI",
-  obsrvaciones: "alguna observacion",
+  observaciones: "alguna observacion",
 };
 
 const ClientDto = (perfil: DtoClient) => console.log(perfil);

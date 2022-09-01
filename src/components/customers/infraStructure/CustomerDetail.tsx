@@ -1,80 +1,114 @@
 import React from "react";
 import { Text, View, Pressable, StyleSheet } from "react-native";
 import { DtoClient } from "../domain/ClientDto";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootStackParamList } from "../../../../screens/RootStackPrams";
+import DetailClientTitle from "../../../core/DetailClientTitle";
+
+type customerDetailScreem = NativeStackNavigationProp<RootStackParamList>
 
 const CustomerDetail = () => {
+
+  const navigation = useNavigation<customerDetailScreem>()
   const dto: DtoClient = {
     nombre: "",
     idCliente: 0,
     direccion: "",
     localidad: "",
     provincia: "",
+
   };
 
   const client: DtoClient = {
-    nombre: "carlos",
+    nombre: "Carlos M. Rodriguez",
     idCliente: 0,
     direccion: "123",
-    localidad: "tucu",
-    provincia: "jujuy",
+    localidad: "S. M. de Tucuman",
+    provincia: "Tucuman",
+    condicionIVA: "RI",
+    observaciones: "Tiene que empezar el gimnacio"
   };
 
   return (
-    <View>
-      {/* <Text style={style.text}>Clientes</Text> */}
-      <Text style={style.sectionTitle}>Detalle del Cliente</Text>
-      <View>
-        <View style={style.container}>
-          <Text style={style.text}>Nombre:{client.nombre}</Text>
-          <Text style={style.text}>CUIT: 21 36456654 9</Text>
-          <Text style={style.text}>Ciudad : S M de Tucuman</Text>
-          <Text style={style.text}>Provincia : S M de Tucuman</Text>
-          <Text style={style.text}>Direccion : G. paz</Text>
-          <Text style={style.text}>IdCliente : 12</Text>
-          <Text style={style.text}>CondicionesIVA : RI</Text>
-          <Text style={style.text}>Observaciones : RI</Text>
+    <View >
+      <DetailClientTitle />
+
+      <View style={style.container}>
+        <View style={style.containerData}>
+
+          <Text style={style.textTitle}>Nombre:</Text>
+          <Text style={style.textData}>{client.nombre}</Text>
+        </View>
+        <View style={style.containerData}>
+
+          <Text style={style.textTitle}>Ciudad:</Text>
+          <Text style={style.textData}>{client.localidad}</Text>
+        </View>
+        <View style={style.containerData}>
+
+          <Text style={style.textTitle}>Provincia:</Text>
+          <Text style={style.textData}>{client.provincia}</Text>
+        </View>
+        <View style={style.containerData}>
+
+          <Text style={style.textTitle}>Direccion:</Text>
+          <Text style={style.textData}>{client.direccion}</Text>
+        </View>
+        <View style={style.containerData}>
+
+          <Text style={style.textTitle}>IdCliente:</Text>
+          <Text style={style.textData}>{client.idCliente}</Text>
+        </View>
+        <View style={style.containerData}>
+
+          <Text style={style.textTitle}>CondicionesIVA:</Text>
+          <Text style={style.textData}>{client.condicionIVA}</Text>
+        </View>
+        <View style={style.containerData}>
+
+          <Text style={style.textTitle}>Observaciones:</Text>
+          <Text style={style.textData}>{client.observaciones}</Text>
         </View>
       </View>
-      <View style={style.sectionBtnStyle}>
-        <Pressable style={style.btnStyle}>
-          <Text style={style.text}>CLIENTES</Text>
-        </Pressable>
-        <Pressable style={style.btnStyle}>
-          <Text style={style.text}>NUEVO PEDIDO</Text>
-        </Pressable>
-      </View>
+
+
+
+      <Pressable style={style.btnStyle}
+        onPress={() => navigation.navigate('CustomerNewOrders')}
+
+      >
+        <Text style={style.text}>NUEVO PEDIDO</Text>
+      </Pressable>
+
     </View>
   );
 };
 const style = StyleSheet.create({
   container: {
-    flexDirection: "column",
-    flexWrap: "wrap",
-    // alignItems: "center",
-    justifyContent: "center",
-    // alignContent: "center",
+    borderWidth: 1,
+    borderRadius: 10,
+    margin: 5,
+    padding: 5,
+    backgroundColor: `#dcdcdc`,
   },
-  sectionTitle: {
-    textAlign: "center",
-    alignItems: "flex-start",
-    fontSize: 20,
-    lineHeight: 21,
-    fontWeight: "bold",
-    letterSpacing: 0.25,
-    color: "white",
-    margin: 20,
-    paddingLeft: 20,
-  },
-  sectionBtnStyle: {
+  containerData: {
     flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: "space-between",
+    padding: 10,
+  },
+  textTitle: {
+    fontSize: 20,
+    fontWeight: "bold",
+  },
+  textData: {
+    fontSize: 20,
   },
   btnStyle: {
     alignItems: "center",
     justifyContent: "center",
     paddingVertical: 15,
-    paddingHorizontal: 15,
+    paddingHorizontal: 32,
     borderRadius: 10,
     elevation: 3,
     backgroundColor: "#0056b3",
@@ -85,9 +119,7 @@ const style = StyleSheet.create({
     lineHeight: 21,
     fontWeight: "bold",
     letterSpacing: 0.25,
-    color: "black",
-    margin: 5,
-    paddingLeft: 20,
+    color: "white",
   },
 });
 

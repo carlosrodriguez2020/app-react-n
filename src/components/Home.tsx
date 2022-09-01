@@ -40,14 +40,22 @@ const Home = () => {
       <Pressable style={style.btnStyle}
         onPress={() => navigation.navigate('Products')}
       >
-
         <Text style={style.text}>MOSTRAR PRODUCTOS</Text>
       </Pressable>
 
 
-      <Pressable style={style.btnStyle}>
+      <Pressable style={style.btnStyle}
+        onPress={() => navigation.navigate('Customers')}
+      >
+        <Text style={style.text}>CLIENTES</Text>
+      </Pressable>
+
+      <Pressable style={style.btnStyle}
+        onPress={() => navigation.navigate('CustomerList')}
+      >
         <Text style={style.text}>MOSTRAR CLIENTES</Text>
       </Pressable>
+
       <Pressable style={style.btnStyle}>
         <Text style={style.text}>INGRESO </Text>
       </Pressable>

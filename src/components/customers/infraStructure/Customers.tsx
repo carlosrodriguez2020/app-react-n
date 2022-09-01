@@ -1,4 +1,13 @@
 import React from "react";
+
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootStackParamList } from "../../../../screens/RootStackPrams";
+
+type CustomersScreemporp = NativeStackNavigationProp<RootStackParamList>
+
+
+
 import {
   View,
   Text,
@@ -9,6 +18,10 @@ import {
   Pressable
 } from "react-native";
 const Customers = () => {
+
+  const navigation = useNavigation<CustomersScreemporp>()
+
+
   const languages = [
     { name: "Pascal", key: "1", provincia: "Jujuy", direccion: "Julio roca", localidad: "Salvador" },
     { name: "C", key: "2", provincia: "Jujuy", direccion: "Julio roca", localidad: "Salvador" },
@@ -36,8 +49,12 @@ const Customers = () => {
             </View>
 
             <View>
-              <Pressable style={style.btnStyle}>
-                <Text style={style.text}>Confirmar/Imprimir</Text>
+
+
+              <Pressable style={style.btnStyle}
+                onPress={() => navigation.navigate('Home')}
+              >
+                <Text style={style.text}>MENU</Text>
               </Pressable>
 
             </View>
