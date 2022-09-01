@@ -14,33 +14,46 @@ import CustomerNewOrders from "./src/components/customers/infraStructure/Custome
 import CustomerList from "./src/components/customers/infraStructure/CustomerList";
 
 
-// const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export default function App() {
+
+
   return (
-    <View style={styles.container}>
+
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Products" component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
+
+
+  )
+  // <View style={styles.container}>
 
 
 
-      <Text>
 
-        {/* <CustomerNewOrders /> */}
 
-        {/* <CustomerList></CustomerList> */}
-        {/* <Orders></Orders> */}
-        {/* <Products></Products> */}
-        {/* <Dropdown></Dropdown> */}
-        {/* <Pedido></Pedido> */}
-        {/* <ClientDto></ClientDto> */}
-        {/* <CustomerDetail></CustomerDetail> */}
-        <Home></Home>
-        {/* <Customers></Customers> */}
-        {/* <Customer></Customer> */}
-      </Text>
+  {/* <Text> */ }
+  {/* <CustomerNewOrders /> */ }
 
-      <StatusBar style="auto" />
-    </View>
-  );
+  {/* <CustomerList></CustomerList> */ }
+  {/* <Orders></Orders> */ }
+  {/* <Products></Products> */ }
+  {/* <Dropdown></Dropdown> */ }
+  {/* <Pedido></Pedido> */ }
+  {/* <ClientDto></ClientDto> */ }
+  {/* <CustomerDetail></CustomerDetail> */ }
+  {/* <Home></Home> */ }
+  {/* <Customers></Customers> */ }
+  {/* <Customer></Customer> */ }
+  {/* </Text> */ }
+
+  //   <StatusBar style="auto" />
+  // </View>
+
 }
 
 const styles = StyleSheet.create({

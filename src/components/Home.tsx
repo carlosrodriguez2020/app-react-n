@@ -23,7 +23,9 @@ const Home = () => {
       >
         <Text style={style.text}>PEDIDOS de ENTREGA </Text>
       </Pressable>
-      <Pressable style={style.btnStyle}>
+      <Pressable style={style.btnStyle}
+
+      >
         <Text style={style.text}>MOSTRAR PRODUCTOS</Text>
       </Pressable>
       <Pressable style={style.btnStyle}>
