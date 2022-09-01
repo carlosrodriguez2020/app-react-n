@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../../../screens/RootStackPrams";
+import ProductTitle from '../../../core/PoductTitle'
+
 
 type productsScreemProp = NativeStackNavigationProp<RootStackParamList, 'Products'>
 
@@ -47,11 +49,12 @@ const Products = () => {
   }, []);
 
   return (
-    <View style={styles.containerTwo}>
+    <View>
+      {/* <ProductTitle></ProductTitle> */}
       <View>
         <SafeAreaView>
           <TextInput
-            style={styles.input}
+            style={style.input}
             onChangeText={setText}
             value={text}
             placeholder="Buscar producto"
@@ -59,18 +62,28 @@ const Products = () => {
         </SafeAreaView>
       </View>
 
-      <View style={{ padding: 5 }}>
+      <View
+
+      >
         <FlatList
           data={result}
           keyExtractor={(item) => item.id.toString()}
           renderItem={({ item }) => (
-            <View style={{ flexDirection: "column", justifyContent: "center" }}>
-              <Text style={styles.inputText}>Producto: {item.title}</Text>
-              {/* <Text style={styles.inputText}>Detalle: {item.body}</Text> */}
+            <View
+              style={style.containerImputText}
+            >
+              <Text
+                style={style.inputText}
+              >Producto: {item.title}
+              </Text>
+              <Text
+                style={style.inputText}
+              >Detalle: {item.body}
+              </Text>
 
               <View>
-                <Pressable style={styles.btnStyle}>
-                  <Text style={styles.text}>VER MAS</Text>
+                <Pressable style={style.btnStyle}>
+                  <Text style={style.text}>VER MAS</Text>
                 </Pressable>
               </View>
             </View>
@@ -79,38 +92,37 @@ const Products = () => {
       </View>
       <Pressable
         onPress={() => navigation.navigate('Home')}
-        style={styles.btnStyle}>
-        <Text style={styles.text}>MENU</Text>
+        style={style.btnStyle}>
+        <Text style={style.text}>MENU</Text>
       </Pressable>
     </View>
   );
 };
-const styles = StyleSheet.create({
-  containerTwo: {
-    maxHeight: "90%",
-    paddingHorizontal: 20,
-    maxWidth: "90%",
+const style = StyleSheet.create({
+  containerImputText: {
+    borderWidth: 1,
+    borderRadius: 10,
+    marginLeft: 5,
+    marginRight: 5,
+    backgroundColor: `#dcdcdc`,
+
   },
   inputText: {
-    width: "100%",
-    textAlign: "center",
+    fontSize: 15,
+    marginTop: 10,
+    marginLeft: 5,
+    marginRight: 5
   },
-
-  // container: {
-  //   // marginTop: StatusBar.currentHeight || 0
-
-  //   padding: 10,
-  //   flexDirection: "column",
-  //   alignItems: "center",
-  //   justifyContent: "center",
-  // },
   input: {
     borderColor: "gray",
-    width: "80%",
     borderWidth: 1,
     borderRadius: 10,
     padding: 10,
-    marginTop: 50,
+    marginTop: 20,
+    marginBottom: 20,
+    marginRight: 10,
+    marginLeft: 10
+
   },
   btnStyle: {
     alignItems: "center",
@@ -120,7 +132,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     elevation: 3,
     backgroundColor: "#0056b3",
-    margin: 15,
+    margin: 10,
   },
   text: {
     fontSize: 18,
