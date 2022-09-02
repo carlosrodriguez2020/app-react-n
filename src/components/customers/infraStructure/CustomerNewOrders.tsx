@@ -19,7 +19,9 @@ const CustomerNewOrders = () => {
     <View style={{ padding: 20 }}>
       <TitleCustomersOrders />
 
-      <Pressable style={style.btnStyle}>
+      <Pressable style={style.btnStyle}
+        onPress={() => alert('Disculpe, no disponible')}
+      >
         <Text style={style.text}>Agregar Producto +</Text>
       </Pressable>
 
@@ -72,7 +74,9 @@ const CustomerNewOrders = () => {
         </View>
       </View>
 
-      <Pressable style={style.btnStyle}>
+      <Pressable style={style.btnStyle}
+        onPress={() => alert('Disculpe, no disponible')}
+      >
         <Text style={style.text}>Confirmar/Imprimir</Text>
       </Pressable>
     </View>

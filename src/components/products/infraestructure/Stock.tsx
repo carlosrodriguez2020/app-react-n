@@ -6,6 +6,7 @@ import { RootStackParamList } from "../../../../screens/RootStackPrams";
 import StockTitle from '../../../core/StockTitle';
 import DropDown from '../../../core/DropDown';
 import { DataTable } from 'react-native-paper';
+import ModalAlert from '../../../core/ModalAlert';
 
 type stockScrollScreem = NativeStackNavigationProp<RootStackParamList>
 
@@ -52,7 +53,7 @@ const Stock = () => {
             </View>
 
             <Pressable style={style.btnStyle}
-                onPress={() => navigation.navigate('CustomerNewOrders')}
+                onPress={() => alert('Disculpe, no disponible')}
 
             >
                 <Text style={style.text}>AGREGAR PRODUCTO</Text>
@@ -82,9 +83,11 @@ const Stock = () => {
             </View>
 
             <Pressable style={style.btnStyle}
-                onPress={() => navigation.navigate('CustomerNewOrders')}
+                onPress={() => alert('Disculpe, no disponible')}
             >
-                <Text style={style.text}>CONFIRMAR</Text>
+                <Text style={style.text}
+
+                >CONFIRMAR</Text>
             </Pressable>
         </View>
     );

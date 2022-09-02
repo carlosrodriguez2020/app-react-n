@@ -82,7 +82,9 @@ const Products = () => {
               </Text>
 
               <View>
-                <Pressable style={style.btnStyle}>
+                <Pressable style={style.btnStyle}
+                  onPress={() => alert('Disculpe, no disponible')}
+                >
                   <Text style={style.text}>VER MAS</Text>
                 </Pressable>
               </View>
@@ -90,12 +92,6 @@ const Products = () => {
           )}
         />
       </View>
-      <Pressable
-        onPress={() => navigation.navigate('Home')}
-        style={style.btnStyle}>
-        <Text style={style.text}>MENU</Text>
-      </Pressable>
-
     </View>
   );
 };

@@ -1,6 +1,4 @@
 import React from "react";
-import Customers from "./customers/infraStructure/Customers";
-import Products from "./products/infraestructure/Products";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../screens/RootStackPrams";
@@ -10,15 +8,10 @@ type homeScreemProps = NativeStackNavigationProp<RootStackParamList, 'Home'>
 import {
   Text,
   View,
-  TouchableOpacity,
   StyleSheet,
   Pressable,
   Image,
 } from "react-native";
-
-interface Navi {
-  Products: string
-}
 
 const Home = () => {
 
@@ -28,7 +21,7 @@ const Home = () => {
       <View style={{ flexDirection: "row", justifyContent: "center" }}>
         <Image
           source={require("../imgs/ypf.png")}
-          style={{ width: 100, height: 100 }}
+          style={{ width: 150, height: 150 }}
         />
       </View>
 
