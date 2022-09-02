@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text, StyleSheet, SafeAreaView, TextInput, Pressable } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, TextInput, Pressable, Alert } from 'react-native';
 import DropDown from '../../../core/DropDown';
 import OrderDetailTitle from '../../../core/OrderDetailTitle';
 import { DtoOrder } from '../domain/DomainOrder';
@@ -89,10 +89,9 @@ const OrderDetail = () => {
       </View>
 
       <Pressable style={style.btnStyle}
-        onPress={() => { "Disculpe, no disponible" }}
+        onPress={() => alert("Disculpe, no disponible")}
       >
         <Text style={style.text}
-          onPress={() => { "Disculpe, no disponible" }}
         >CONFIRMAR</Text>
       </Pressable>
 
