@@ -69,7 +69,6 @@ const OrderDetail = () => {
           <Text style={style.textData}>{orderData.direccion}</Text>
         </View>
       </View>
-
       <View>
         <View style={style.containerCondition}>
           <Text style={style.textGuide}>Producto</Text>
@@ -89,8 +88,12 @@ const OrderDetail = () => {
         </View>
       </View>
 
-      <Pressable style={style.btnStyle}>
-        <Text style={style.text}>CONFIRMAR</Text>
+      <Pressable style={style.btnStyle}
+        onPress={() => { "Disculpe, no disponible" }}
+      >
+        <Text style={style.text}
+          onPress={() => { "Disculpe, no disponible" }}
+        >CONFIRMAR</Text>
       </Pressable>
 
 
@@ -141,6 +144,7 @@ const style = StyleSheet.create({
     marginRight: 10,
     marginLeft: 10,
     fontSize: 25,
+    textAlign: "center"
 
 
   },

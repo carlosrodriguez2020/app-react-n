@@ -5,7 +5,7 @@ import { RootStackParamList } from "../../../../screens/RootStackPrams";
 import ProductTitle from '../../../core/PoductTitle'
 
 
-type productsScreemProp = NativeStackNavigationProp<RootStackParamList, 'Products'>
+type productsScreemProp = NativeStackNavigationProp<RootStackParamList, 'Productos'>
 
 import {
   View,
@@ -80,14 +80,6 @@ const Products = () => {
                 style={style.inputText}
               >Detalle: {item.body}
               </Text>
-
-              <View>
-                <Pressable style={style.btnStyle}
-                  onPress={() => alert('Disculpe, no disponible')}
-                >
-                  <Text style={style.text}>VER MAS</Text>
-                </Pressable>
-              </View>
             </View>
           )}
         />

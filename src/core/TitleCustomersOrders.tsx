@@ -7,7 +7,7 @@ const TitleCustomersOrders = () => {
     return (
         <View>
             <Text style={Style.titleText}>
-                Clientes/Pedidos
+                Clientes/Pedido
             </Text>
         </View>
     );

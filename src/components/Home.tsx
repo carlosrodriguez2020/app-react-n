@@ -26,19 +26,19 @@ const Home = () => {
       </View>
 
       <Pressable style={style.btnStyle}
-        onPress={() => navigation.navigate('Orders')}
+        onPress={() => navigation.navigate('Pedidos')}
       >
         <Text style={style.text}>PEDIDOS de ENTREGA </Text>
       </Pressable>
 
       <Pressable style={style.btnStyle}
-        onPress={() => navigation.navigate('Products')}
+        onPress={() => navigation.navigate('Productos')}
       >
         <Text style={style.text}>MOSTRAR PRODUCTOS</Text>
       </Pressable>
 
       <Pressable style={style.btnStyle}
-        onPress={() => navigation.navigate('CustomerList')}
+        onPress={() => navigation.navigate('Clientes')}
       >
         <Text style={style.text}>MOSTRAR CLIENTES</Text>
       </Pressable>

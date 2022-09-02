@@ -6,7 +6,7 @@ const OrderDetailTitle = () => {
     return (
         <View>
             <Text style={Style.titleText}>
-                Ingreso de Stock
+                Detalle
             </Text>
         </View>
     );

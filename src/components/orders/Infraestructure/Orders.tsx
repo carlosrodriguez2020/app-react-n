@@ -8,7 +8,7 @@ import { RootStackParamList } from "../../../../screens/RootStackPrams";
 import OrdersTitle from "../../../core/OrdersTitle";
 
 
-type odersScreemProp = NativeStackNavigationProp<RootStackParamList>
+type odersScreemProp = NativeStackNavigationProp<RootStackParamList, 'Pedidos'>
 
 interface Order {
   id: string;
@@ -74,7 +74,7 @@ const Orders = () => {
 
             <View>
               <Pressable style={style.btnStyle}
-                onPress={() => navigation.navigate('OrderDetail')}
+                onPress={() => navigation.navigate('DetallesPedido')}
               >
                 <Text style={style.text}>DETALLE</Text>
               </Pressable>

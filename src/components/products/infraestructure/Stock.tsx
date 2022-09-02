@@ -6,9 +6,9 @@ import { RootStackParamList } from "../../../../screens/RootStackPrams";
 import StockTitle from '../../../core/StockTitle';
 import DropDown from '../../../core/DropDown';
 import { DataTable } from 'react-native-paper';
-import ModalAlert from '../../../core/ModalAlert';
 
-type stockScrollScreem = NativeStackNavigationProp<RootStackParamList>
+
+type stockScrollScreem = NativeStackNavigationProp<RootStackParamList, 'Stock'>
 
 
 const Stock = () => {

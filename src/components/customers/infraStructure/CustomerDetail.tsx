@@ -6,7 +6,7 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../../../screens/RootStackPrams";
 import DetailClientTitle from "../../../core/DetailClientTitle";
 
-type customerDetailScreem = NativeStackNavigationProp<RootStackParamList>
+type customerDetailScreem = NativeStackNavigationProp<RootStackParamList, 'DetalleCliente'>
 
 const CustomerDetail = () => {
 
@@ -75,7 +75,7 @@ const CustomerDetail = () => {
 
 
       <Pressable style={style.btnStyle}
-        onPress={() => navigation.navigate('CustomerNewOrders')}
+        onPress={() => navigation.navigate('NuevoPedido')}
 
       >
         <Text style={style.text}>NUEVO PEDIDO</Text>

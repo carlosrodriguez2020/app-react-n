@@ -1,15 +1,15 @@
 export type RootStackParamList = {
     Home: undefined;
     
-    Products: undefined;
+    Productos: undefined;
 
-    Orders:undefined;
-    OrderDetail:undefined;
+    Pedidos:undefined;
+    DetallesPedido:undefined;
 
-    CustomerDetail:undefined;
-    CustomerNewOrders:undefined;
-    Customers:undefined;
-    CustomerList:undefined;
+    DetalleCliente:undefined;
+    NuevoPedido:undefined;
+    
+    Clientes:undefined;
 
     Stock:undefined;
     };

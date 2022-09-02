@@ -6,9 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../../../screens/RootStackPrams";
 
-
-type customersListScreemProo = NativeStackNavigationProp<RootStackParamList>
-
+type customersListScreemProo = NativeStackNavigationProp<RootStackParamList, 'Clientes'>
 interface CustomersList {
   id: number;
   title: string;
@@ -32,10 +30,7 @@ const CustomerList = () => {
         }
       );
       const resp = await data.json();
-
       setResult(resp);
-
-
     };
     api();
   }, []);
@@ -79,7 +74,7 @@ const CustomerList = () => {
 
             <View>
               <Pressable style={style.btnStyle}
-                onPress={() => navigation.navigate('CustomerDetail')}
+                onPress={() => navigation.navigate('DetalleCliente')}
               >
                 <Text style={style.text}>VER MAS</Text>
               </Pressable>
@@ -90,13 +85,12 @@ const CustomerList = () => {
 
 
       <View>
-        <Pressable style={style.btnStyle}
-          // onPress={() => navigation.navigate('Home')}
+        {/* <Pressable style={style.btnStyle}
+          
           onPress={() => navigation.navigate('CustomerDetail')}
         >
           <Text style={style.text}>DETALLE</Text>
-        </Pressable>
-
+        </Pressable> */}
       </View>
 
     </View>
