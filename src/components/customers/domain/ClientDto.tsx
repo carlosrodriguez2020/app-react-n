@@ -17,9 +17,3 @@ export const dtoClient: DtoClient = {
   condicionIVA: "RI",
   observaciones: "alguna observacion",
 };
-
-const ClientDto = (perfil: DtoClient) => console.log(perfil);
-
-ClientDto(dtoClient);
-
-export default ClientDto;

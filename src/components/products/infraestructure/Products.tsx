@@ -43,7 +43,7 @@ const Products = () => {
       const resp = await data.json();
 
       setResult(resp);
-      console.log(resp);
+
     };
     api();
   }, []);

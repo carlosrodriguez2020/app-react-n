@@ -32,13 +32,8 @@ const Orders = () => {
         }
       );
       const resp = await data.json();
-      console.log(resp);
 
       setOrderList(resp);
-
-      setTimeout(() => {
-        console.log(orderList);
-      }, 100);
     };
     api();
   }, []);

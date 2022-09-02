@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, Pressable } from "react-native";
 import TitleCustomersOrders from "../../../core/TitleCustomersOrders";
 import { RadioButton } from "react-native-paper";
 import DropDown from "../../../core/DropDown";
-
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../../../screens/RootStackPrams";
@@ -14,9 +13,7 @@ const CustomerNewOrders = () => {
 
   const navigation = useNavigation<custoNewOrderScreemProp>()
 
-  const [checked, setChecked] = React.useState("first");
-
-  console.log("hola");
+  const [checked, setChecked] = React.useState("");
 
   return (
     <View style={{ padding: 20 }}>
@@ -60,7 +57,6 @@ const CustomerNewOrders = () => {
       <View style={{
         flexDirection: "row",
         justifyContent: "center"
-
       }}>
 
         <View style={style.data}>

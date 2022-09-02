@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { View, Text, Pressable, StyleSheet, SafeAreaView, TextInput } from 'react-native';
-
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../../../screens/RootStackPrams";
 import StockTitle from '../../../core/StockTitle';
 import DropDown from '../../../core/DropDown';
+import { DataTable } from 'react-native-paper';
 
 type stockScrollScreem = NativeStackNavigationProp<RootStackParamList>
 
@@ -58,10 +58,31 @@ const Stock = () => {
                 <Text style={style.text}>AGREGAR PRODUCTO</Text>
             </Pressable>
 
+            <View style={style.table}>
+                <DataTable >
+                    <DataTable.Header>
+                        <DataTable.Title
+                        >Agregaste
+                        </DataTable.Title>
+                    </DataTable.Header>
+
+                    <DataTable.Row>
+                        <DataTable.Cell>1</DataTable.Cell>
+                        <DataTable.Cell>Nafta</DataTable.Cell>
+                        <DataTable.Cell numeric>88888</DataTable.Cell>
+                    </DataTable.Row>
+
+                    <DataTable.Row>
+                        <DataTable.Cell>2</DataTable.Cell>
+                        <DataTable.Cell>Agroquimicos</DataTable.Cell>
+                        <DataTable.Cell numeric>888888</DataTable.Cell>
+                    </DataTable.Row>
+
+                </DataTable>
+            </View>
 
             <Pressable style={style.btnStyle}
                 onPress={() => navigation.navigate('CustomerNewOrders')}
-
             >
                 <Text style={style.text}>CONFIRMAR</Text>
             </Pressable>
@@ -88,7 +109,7 @@ const style = StyleSheet.create({
     btnStyle: {
         alignItems: "center",
         justifyContent: "center",
-        paddingVertical: 15,
+        paddingVertical: 10,
         paddingHorizontal: 32,
         borderRadius: 10,
         elevation: 3,
@@ -130,6 +151,14 @@ const style = StyleSheet.create({
         color: "black",
         margin: 15
     },
+    table: {
+        backgroundColor: `#dcdcdc`,
+        borderRadius: 10,
+        fontSize: 20,
+        paddingHorizontal: 32,
+        marginRight: 10,
+        marginLeft: 10
+    }
 })
 
 export default Stock;

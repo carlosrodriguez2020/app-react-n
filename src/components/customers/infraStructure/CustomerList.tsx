@@ -32,9 +32,9 @@ const CustomerList = () => {
         }
       );
       const resp = await data.json();
-      console.log(resp);
+
       setResult(resp);
-      console.log(result);
+
 
     };
     api();
