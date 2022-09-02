@@ -55,7 +55,7 @@ const Stock = () => {
                 onPress={() => navigation.navigate('CustomerNewOrders')}
 
             >
-                <Text style={style.text}>NUEVO PEDIDO</Text>
+                <Text style={style.text}>AGREGAR PRODUCTO</Text>
             </Pressable>
 
 
@@ -63,7 +63,7 @@ const Stock = () => {
                 onPress={() => navigation.navigate('CustomerNewOrders')}
 
             >
-                <Text style={style.text}>CONFIRMAR/ENVIAR</Text>
+                <Text style={style.text}>CONFIRMAR</Text>
             </Pressable>
         </View>
     );

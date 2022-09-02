@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, SafeAreaView, StyleSheet, TextInput, Pressable, FlatList } from "react-native";
 
+
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../../../screens/RootStackPrams";
+import OrdersTitle from "../../../core/OrdersTitle";
+
 
 type odersScreemProp = NativeStackNavigationProp<RootStackParamList>
 
@@ -41,9 +44,12 @@ const Orders = () => {
   }, []);
   return (
     <View>
-      <View >
+      <OrdersTitle />
+      <View>
         <SafeAreaView>
-          <TextInput style={style.input} onChangeText={setText} value={text} />
+          <TextInput style={style.input} onChangeText={setText} value={text}
+            placeholder={"Buscar Pedido"}
+          />
         </SafeAreaView>
       </View>
 
@@ -62,7 +68,7 @@ const Orders = () => {
             >{item.title}
             </Text>
             <Text style={style.inputTextTitle}>
-              Detalle:
+              Pedido:
             </Text>
             <Text
               style={style.inputText}

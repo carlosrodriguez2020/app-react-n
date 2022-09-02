@@ -6,7 +6,7 @@ const DetailClientTitle = () => {
     return (
         <View>
             <Text style={Style.titleText}>
-                Lista de Productos
+                Detalle del cliente
             </Text>
         </View>
     );

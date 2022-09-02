@@ -23,7 +23,7 @@ const CustomerNewOrders = () => {
       <TitleCustomersOrders />
 
       <Pressable style={style.btnStyle}>
-        <Text style={style.text}>Agregar Pedido +</Text>
+        <Text style={style.text}>Agregar Producto +</Text>
       </Pressable>
 
       <View>
@@ -57,15 +57,22 @@ const CustomerNewOrders = () => {
 
       <DropDown />
 
-      <View style={style.data}>
-        <View style={style.containerTextTwo}>
-          <Text style={style.textTwoTitle}>Codigo/Authe: </Text>
-          <Text style={style.textTwo}>8888888</Text>
-        </View>
+      <View style={{
+        flexDirection: "row",
+        justifyContent: "center"
 
-        <View style={style.containerTextTwo}>
-          <Text style={style.textTwoTitle}>Producto: </Text>
-          <Text style={style.textTwo}>8888888</Text>
+      }}>
+
+        <View style={style.data}>
+          <View style={style.containerTextTwo}>
+            <Text style={style.textTwoTitle}>Codigo/Authe: </Text>
+            <Text style={style.textTwo}>8888888</Text>
+          </View>
+
+          <View style={style.containerTextTwo}>
+            <Text style={style.textTwoTitle}>Producto: </Text>
+            <Text style={style.textTwo}>8888888</Text>
+          </View>
         </View>
       </View>
 
@@ -83,10 +90,10 @@ const style = StyleSheet.create({
     flexWrap: "wrap"
   },
   data: {
-    borderWidth: 1,
     borderRadius: 10,
     backgroundColor: `#dcdcdc`,
-    flexDirection: "column", alignItems: "center"
+    flexDirection: "column",
+    alignItems: "center",
   },
   FilterProdcuts: {
     flexDirection: "row",
