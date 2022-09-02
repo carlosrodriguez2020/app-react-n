@@ -14,7 +14,7 @@ const DetailClientTitle = () => {
 const Style = StyleSheet.create({
 
     titleText: {
-        fontSize: 18,
+        fontSize: 20,
         lineHeight: 21,
         fontWeight: "bold",
         letterSpacing: 0.25,

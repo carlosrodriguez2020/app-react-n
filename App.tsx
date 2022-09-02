@@ -16,6 +16,9 @@ import CustomerNewOrders from "./src/components/customers/infraStructure/Custome
 import CustomerList from "./src/components/customers/infraStructure/CustomerList";
 
 import 'react-native-gesture-handler';
+import Stock from "./src/components/products/infraestructure/Stock";
+import OrderDetail from "./src/components/orders/Infraestructure/OrderDetail";
+
 
 
 const Stack = createNativeStackNavigator();
@@ -24,45 +27,20 @@ export default function App() {
 
 
   return (
-
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Orders" component={Orders} />
+        <Stack.Screen name="OrderDetail" component={OrderDetail} />
         <Stack.Screen name="Products" component={Products} />
         <Stack.Screen name="Customers" component={Customers} />
         <Stack.Screen name="CustomerList" component={CustomerList} />
         <Stack.Screen name="CustomerDetail" component={CustomerDetail} />
         <Stack.Screen name="CustomerNewOrders" component={CustomerNewOrders} />
-
+        <Stack.Screen name="Stock" component={Stock} />
       </Stack.Navigator>
     </NavigationContainer>
-
-
   )
-  // <View style={styles.container}>
-
-
-
-
-
-  {/* <Text> */ }
-  {/* <CustomerNewOrders /> */ }
-
-  {/* <CustomerList></CustomerList> */ }
-  {/* <Orders></Orders> */ }
-  {/* <Products></Products> */ }
-  {/* <Dropdown></Dropdown> */ }
-  {/* <Pedido></Pedido> */ }
-  {/* <ClientDto></ClientDto> */ }
-  {/* <CustomerDetail></CustomerDetail> */ }
-  {/* <Home></Home> */ }
-  {/* <Customers></Customers> */ }
-  {/* <Customer></Customer> */ }
-  {/* </Text> */ }
-
-  //   <StatusBar style="auto" />
-  // </View>
-
 }
 
 const styles = StyleSheet.create({

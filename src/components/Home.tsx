@@ -33,6 +33,7 @@ const Home = () => {
       </View>
 
       <Pressable style={style.btnStyle}
+        onPress={() => navigation.navigate('Orders')}
       >
         <Text style={style.text}>PEDIDOS de ENTREGA </Text>
       </Pressable>
@@ -43,23 +44,18 @@ const Home = () => {
         <Text style={style.text}>MOSTRAR PRODUCTOS</Text>
       </Pressable>
 
-
-      <Pressable style={style.btnStyle}
-        onPress={() => navigation.navigate('Customers')}
-      >
-        <Text style={style.text}>CLIENTES</Text>
-      </Pressable>
-
       <Pressable style={style.btnStyle}
         onPress={() => navigation.navigate('CustomerList')}
       >
         <Text style={style.text}>MOSTRAR CLIENTES</Text>
       </Pressable>
 
-      <Pressable style={style.btnStyle}>
-        <Text style={style.text}>INGRESO </Text>
+      <Pressable style={style.btnStyle}
+        onPress={() => navigation.navigate('Stock')}
+      >
+        <Text style={style.text}>INGRESO de STOCK</Text>
       </Pressable>
-    </View>
+    </View >
   );
 };
 

@@ -1,13 +1,12 @@
-import React from 'react';
+import React from 'react'
 import { View, Text, StyleSheet } from "react-native";
 
-const TitleCustomersOrders = () => {
 
-
+const OrderDetailTitle = () => {
     return (
         <View>
             <Text style={Style.titleText}>
-                Clientes/Pedidos
+                Ingreso de Stock
             </Text>
         </View>
     );
@@ -24,5 +23,4 @@ const Style = StyleSheet.create({
     }
 
 })
-
-export default TitleCustomersOrders;
+export default OrderDetailTitle;
