@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../screens/RootStackPrams";
@@ -13,10 +13,19 @@ import {
   Image,
 } from "react-native";
 
-const Home = () => {
+const Home: FC = () => {
+  const data = [
+    { label: 'Nafta', value: '1' },
+    { label: 'Diesel', value: '2' },
+    { label: 'Three', value: '3' },
+    { label: 'Four', value: '4' },
+    { label: 'Five', value: '5' },
+  ];
 
   const navigation = useNavigation<homeScreemProps>()
   return (
+
+
     <View style={{ flex: 1, justifyContent: "center" }}>
       <View style={{ flexDirection: "row", justifyContent: "center" }}>
         <Image
@@ -48,6 +57,8 @@ const Home = () => {
       >
         <Text style={style.text}>INGRESO de STOCK</Text>
       </Pressable>
+
+
     </View >
   );
 };
