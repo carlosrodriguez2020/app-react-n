@@ -116,12 +116,12 @@ const style = StyleSheet.create({
   btnStyle: {
     alignItems: "center",
     justifyContent: "center",
-    paddingVertical: 15,
-    paddingHorizontal: 15,
+    paddingVertical: 10,
+    paddingHorizontal: 32,
     borderRadius: 10,
     elevation: 3,
     backgroundColor: "#0056b3",
-    margin: 10,
+    margin: 15,
   },
   text: {
     fontSize: 18,
