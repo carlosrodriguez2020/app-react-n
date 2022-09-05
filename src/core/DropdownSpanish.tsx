@@ -110,10 +110,14 @@ const styles = StyleSheet.create({
 
   },
   overlay: {
-    width: '100%',
+    width: '50%',
     height: '100%',
   },
   item: {
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    alignContent: "center",
     paddingHorizontal: 10,
     paddingVertical: 10,
     borderBottomWidth: 1,

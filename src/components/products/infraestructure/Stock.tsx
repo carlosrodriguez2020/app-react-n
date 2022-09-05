@@ -4,9 +4,8 @@ import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../../../screens/RootStackPrams";
 import StockTitle from '../../../core/StockTitle';
-// import DropDown from '../../../core/DropDown';
-import { DataTable } from 'react-native-paper';
 import DropdownSpanish from '../../../core/DropdownSpanish';
+import TableRN from '../../../core/TableRN';
 
 
 type stockScrollScreem = NativeStackNavigationProp<RootStackParamList, 'Stock'>
@@ -31,10 +30,11 @@ const Stock = () => {
   return (
     <View>
       <StockTitle />
+      <View>
+        <TableRN />
+      </View>
 
-      <View
-      // style={{ borderWidth: 1 }}
-      >
+      <View>
         <View style={{ flexDirection: "row" }}>
           <View style={style.drop}>
             {!!selected && (
@@ -54,14 +54,17 @@ const Stock = () => {
 
         </View>
 
+
+
         <Text style={style.textInfo}>
           ¿Solicitar mas?
         </Text>
 
 
-        <View>
+        <View >
           <SafeAreaView>
             <TextInput style={style.input} onChangeText={setText} value={text}
+              keyboardType="number-pad"
               placeholder={"Ingrese su cantidad"}
             />
 
@@ -76,30 +79,11 @@ const Stock = () => {
       >
         <Text style={style.text}>AGREGAR PRODUCTO</Text>
       </Pressable>
-
-      <View style={style.table}>
-        <DataTable >
-          <DataTable.Header>
-            <DataTable.Title
-            >Agregaste
-            </DataTable.Title>
-          </DataTable.Header>
-
-          <DataTable.Row>
-            <DataTable.Cell>1</DataTable.Cell>
-            <DataTable.Cell>Nafta</DataTable.Cell>
-            <DataTable.Cell numeric>88888</DataTable.Cell>
-          </DataTable.Row>
-
-          <DataTable.Row>
-            <DataTable.Cell>2</DataTable.Cell>
-            <DataTable.Cell>Agroquimicos</DataTable.Cell>
-            <DataTable.Cell numeric>888888</DataTable.Cell>
-          </DataTable.Row>
-
-        </DataTable>
+      <View
+        style={{ flexDirection: "row" }}
+      >
+        <TableRN />
       </View>
-
       <Pressable style={style.btnStyle}
         onPress={() => alert('Disculpe, no disponible')}
       >
@@ -107,13 +91,15 @@ const Stock = () => {
 
         >CONFIRMAR</Text>
       </Pressable>
+
+
     </View>
   );
 }
 const style = StyleSheet.create({
   textInfo: {
     textAlign: "center",
-    fontSize: 22,
+    fontSize: 18,
     marginTop: 20
 
   },
@@ -125,7 +111,9 @@ const style = StyleSheet.create({
     marginTop: 20,
     marginBottom: 20,
     marginRight: 10,
-    marginLeft: 10
+    marginLeft: 10,
+    textAlign: "center",
+    fontSize: 20
   },
   btnStyle: {
     alignItems: "center",
@@ -139,7 +127,6 @@ const style = StyleSheet.create({
   },
   text: {
     fontSize: 18,
-    // lineHeight: 21,
     fontWeight: "bold",
     letterSpacing: 0.25,
     color: "white",
@@ -153,13 +140,14 @@ const style = StyleSheet.create({
   data: {
     borderRadius: 10,
     backgroundColor: `#dcdcdc`,
-    flexDirection: "column", alignItems: "center",
+    flexDirection: "column",
+    alignItems: "center",
     marginRight: 10,
     marginLeft: 10
   },
   textTwoTitle: {
     fontSize: 18,
-    lineHeight: 21,
+
     fontWeight: "bold",
     letterSpacing: 0.25,
     color: "black",
@@ -168,10 +156,10 @@ const style = StyleSheet.create({
 
   textTwo: {
     fontSize: 18,
-    // lineHeight: 21,
+    textAlign: "center",
     letterSpacing: 0.25,
     color: "black",
-    margin: 15
+    margin: 10
   },
   table: {
     backgroundColor: `#dcdcdc`,

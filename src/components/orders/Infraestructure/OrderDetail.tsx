@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
-import { View, Text, StyleSheet, SafeAreaView, TextInput, Pressable, Alert } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, TextInput, Pressable } from 'react-native';
+import { Table } from 'react-native-table-component';
 import DropDown from '../../../core/DropDown';
 import OrderDetailTitle from '../../../core/OrderDetailTitle';
+import TableRN from '../../../core/TableRN';
 import { DtoOrder } from '../domain/DomainOrder';
 
 const dtoOrder: DtoOrder = {
@@ -87,6 +89,8 @@ const OrderDetail = () => {
           <Text style={style.textBalace}>Pendiente:8888</Text>
         </View>
       </View>
+
+      <TableRN />
 
       <Pressable style={style.btnStyle}
         onPress={() => alert("Disculpe, no disponible")}

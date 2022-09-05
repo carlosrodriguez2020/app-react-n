@@ -8,6 +8,7 @@ import { RootStackParamList } from "../../../../screens/RootStackPrams";
 import OrdersTitle from "../../../core/OrdersTitle";
 
 
+
 type odersScreemProp = NativeStackNavigationProp<RootStackParamList, 'Pedidos'>
 
 interface Order {
@@ -47,6 +48,8 @@ const Orders = () => {
           />
         </SafeAreaView>
       </View>
+
+
 
       <FlatList
         data={orderList}
