@@ -18,7 +18,7 @@ import {
   Pressable,
   TextInput,
 } from "react-native";
-import { getDataCustomers } from "../controllers/getDataCustomers";
+import { getDataProducts } from "../controllers/getDataPoducts";
 
 interface CustomersList {
   id: number;
@@ -35,7 +35,7 @@ const Products = () => {
 
   useEffect(() => {
     const api = async () => {
-      const data = await getDataCustomers()
+      const data = await getDataProducts()
       const resp = await data.json();
 
       setResult(resp);

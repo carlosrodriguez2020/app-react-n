@@ -1,5 +1,4 @@
-
-export async function getDataCustomers() {
+export async function getDataOrders() {
     return (
         fetch(
             "https://jsonplaceholder.typicode.com/users/1/posts",
@@ -7,5 +6,8 @@ export async function getDataCustomers() {
                 method: "GET",
             }
         )
+
     )
+
+
 }

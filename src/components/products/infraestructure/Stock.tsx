@@ -30,9 +30,6 @@ const Stock = () => {
   return (
     <View>
       <StockTitle />
-      <View>
-        <TableRN />
-      </View>
 
       <View>
         <View style={{ flexDirection: "row" }}>
@@ -104,7 +101,6 @@ const style = StyleSheet.create({
 
   },
   input: {
-    borderColor: "gray",
     borderWidth: 1,
     borderRadius: 10,
     padding: 10,
@@ -139,7 +135,7 @@ const style = StyleSheet.create({
   },
   data: {
     borderRadius: 10,
-    backgroundColor: `#dcdcdc`,
+    backgroundColor: '#fff',
     flexDirection: "column",
     alignItems: "center",
     marginRight: 10,
@@ -160,14 +156,6 @@ const style = StyleSheet.create({
     letterSpacing: 0.25,
     color: "black",
     margin: 10
-  },
-  table: {
-    backgroundColor: `#dcdcdc`,
-    borderRadius: 10,
-    fontSize: 20,
-    paddingHorizontal: 32,
-    marginRight: 10,
-    marginLeft: 10
   },
   drop: {
     flex: 1,

@@ -6,6 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../../../screens/RootStackPrams";
 import OrdersTitle from "../../../core/OrdersTitle";
+import { getDataOrders } from "../controllers/getDataOrders";
 
 
 
@@ -26,12 +27,7 @@ const Orders = () => {
 
   useEffect(() => {
     const api = async () => {
-      const data = await fetch(
-        "https://jsonplaceholder.typicode.com/users/1/posts",
-        {
-          method: "GET",
-        }
-      );
+      const data = await getDataOrders()
       const resp = await data.json();
 
       setOrderList(resp);

@@ -74,7 +74,8 @@ const TableRN = () => {
 const style = StyleSheet.create({
     containerTitleTable: {
         width: 100,
-        backgroundColor: "#0056b3",
+        backgroundColor: `#191970`,
+
     },
     titleTable: {
         textAlign: "center",
