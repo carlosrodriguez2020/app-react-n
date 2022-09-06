@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { View, Text, StyleSheet, SafeAreaView, TextInput, Pressable } from 'react-native';
 import { Table } from 'react-native-table-component';
+import DropdownSpanish from '../../../core/DropDown';
 import DropDown from '../../../core/DropDown';
 import OrderDetailTitle from '../../../core/OrderDetailTitle';
 import TableRN from '../../../core/TableRN';
@@ -28,6 +29,14 @@ const orderData: DtoOrder = {
 
 const OrderDetail = () => {
   const [text, setText] = useState("");
+  const [selected, setSelected] = useState<any>(undefined);
+  const data = [
+    { label: 'Nafta', value: '1' },
+    { label: 'Diesel', value: '2' },
+    { label: 'Nafta Premium', value: '3' },
+    { label: 'Diesel Premium', value: '4' },
+    { label: 'Agroquimicos', value: '5' },
+  ];
 
 
   return (
@@ -73,8 +82,8 @@ const OrderDetail = () => {
       </View>
       <View>
         <View style={style.containerCondition}>
-          <Text style={style.textGuide}>Producto</Text>
-          <DropDown />
+          {/* <Text style={style.textGuide}>Producto</Text> */}
+          <DropdownSpanish label="Productos" data={data} onSelect={setSelected} />
         </View>
         <View>
 

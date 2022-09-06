@@ -96,7 +96,8 @@ const style = StyleSheet.create({
     fontSize: 15,
     marginTop: 10,
     marginLeft: 5,
-    marginRight: 5
+    marginRight: 5,
+    textAlign: "center"
   },
   input: {
     borderColor: "gray",
