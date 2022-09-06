@@ -80,26 +80,25 @@ const OrderDetail = () => {
           <Text style={style.textData}>{orderData.direccion}</Text>
         </View>
       </View>
+
       <View>
-        <View style={style.containerCondition}>
-          {/* <Text style={style.textGuide}>Producto</Text> */}
-          <DropdownSpanish label="Productos" data={data} onSelect={setSelected} />
-        </View>
-        <View>
-
-          <SafeAreaView>
-            <TextInput style={style.input} onChangeText={setText} value={text}
-              placeholder={"Ingresar Cantidad a Entregar"}
-            />
-          </SafeAreaView>
-
-        </View>
-        <View style={style.containerBalance}>
-          <Text style={style.textBalace}>Pendiente:8888</Text>
+        <View style={{ flexDirection: "row" }}>
+          <View style={style.drop}>
+            {!!selected && (
+              <Text style={style.textInfo}>
+                Seleccionaste :
+              </Text>
+            )}
+            <DropdownSpanish label="Productos" data={data} onSelect={setSelected} />
+          </View>
         </View>
       </View>
 
-      <TableRN />
+      <View style={{ flexDirection: "row" }}>
+        <TableRN />
+
+      </View>
+
 
       <Pressable style={style.btnStyle}
         onPress={() => alert("Disculpe, no disponible")}
@@ -157,8 +156,6 @@ const style = StyleSheet.create({
     marginLeft: 10,
     fontSize: 25,
     textAlign: "center"
-
-
   },
   containerBalance: {
     borderColor: "gray",
@@ -192,9 +189,18 @@ const style = StyleSheet.create({
     letterSpacing: 0.25,
     color: "white",
   },
-
-
-
+  drop: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+  },
+  textInfo: {
+    textAlign: "center",
+    fontSize: 18,
+    marginTop: 20
+  },
 })
 
 export default OrderDetail;
