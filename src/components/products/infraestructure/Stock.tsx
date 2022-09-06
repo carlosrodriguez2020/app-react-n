@@ -48,15 +48,11 @@ const Stock = () => {
               <Text style={style.textTwo}>8888888</Text>
             </View>
           </View>
-
         </View>
-
-
 
         <Text style={style.textInfo}>
           ¿Solicitar mas?
         </Text>
-
 
         <View >
           <SafeAreaView>
@@ -98,7 +94,6 @@ const style = StyleSheet.create({
     textAlign: "center",
     fontSize: 18,
     marginTop: 20
-
   },
   input: {
     borderWidth: 1,

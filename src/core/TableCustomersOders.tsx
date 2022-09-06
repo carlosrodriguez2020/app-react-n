@@ -16,23 +16,17 @@ const dataTable: DataTable[] = [
     { id: 4, producto: 'Diesel Premiumn', cantidad: '88888' },
     { id: 5, producto: 'Agroquimicos', cantidad: '88888' },
 ]
-const TableRN = () => {
+const TableCustomersOrder = () => {
 
     const item = ({ item }: any) => {
         return (
             <View style={{ flexDirection: "row", justifyContent: "center", alignContent: "center", alignItems: "center" }}>
-                <View style={{ width: "33%" }}>
-                    <Text style={style.textTable}>
-                        {item.id}
-                    </Text>
-                </View>
-
-                <View style={{ width: "33%" }}>
+                <View style={{ width: "50%" }}>
                     <Text style={style.textTable}>
                         {item.producto}
                     </Text>
                 </View>
-                <View style={{ width: "33%" }}>
+                <View style={{ width: "50%" }}>
                     <Text style={style.textTable}>
                         {item.cantidad}
                     </Text>
@@ -48,18 +42,12 @@ const TableRN = () => {
             <View style={{ flexDirection: "row" }}>
                 <View style={style.containerTitleTable}>
                     <Text style={style.titleTable}>
-                        Id
-                    </Text>
-                </View>
-
-                <View style={style.containerTitleTable}>
-                    <Text style={style.titleTable}>
                         Producto
                     </Text>
                 </View>
                 <View style={style.containerTitleTable}>
                     <Text style={style.titleTable}>
-                        Cantidad
+                        Codigo Auth
                     </Text>
                 </View>
             </View>
@@ -73,8 +61,9 @@ const TableRN = () => {
 }
 const style = StyleSheet.create({
     containerTitleTable: {
-        width: "33%",
+        width: "50%",
         backgroundColor: `#191970`,
+
 
     },
     titleTable: {
@@ -90,4 +79,4 @@ const style = StyleSheet.create({
 
 })
 
-export default TableRN;
+export default TableCustomersOrder;

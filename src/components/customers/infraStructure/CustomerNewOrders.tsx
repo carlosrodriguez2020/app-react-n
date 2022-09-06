@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, StyleSheet, Pressable } from "react-native";
 import TitleCustomersOrders from "../../../core/TitleCustomersOrders";
 import { RadioButton } from "react-native-paper";
@@ -6,18 +6,44 @@ import DropDown from "../../../core/DropDown";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../../../screens/RootStackPrams";
+import DropdownSpanish from "../../../core/DropdownSpanish";
+import TableCustomersOrder from "../../../core/TableCustomersOders";
 
 type custoNewOrderScreemProp = NativeStackNavigationProp<RootStackParamList>
 
 const CustomerNewOrders = () => {
+  const [selected, setSelected] = useState<any>(undefined);
+
+  const data = [
+    { label: 'Nafta', value: '1' },
+    { label: 'Diesel', value: '2' },
+    { label: 'Nafta Premium', value: '3' },
+    { label: 'Diesel Premium', value: '4' },
+    { label: 'Agroquimicos', value: '5' },
+  ];
 
   const navigation = useNavigation<custoNewOrderScreemProp>()
 
-  const [checked, setChecked] = React.useState("");
+
 
   return (
     <View style={{ padding: 20 }}>
       <TitleCustomersOrders />
+
+      <View>
+        <View style={{ flexDirection: "row" }}>
+          <View style={style.drop}>
+            {!!selected && (
+              <Text style={style.textInfo}>
+                Seleccionaste :
+              </Text>
+            )}
+            <DropDown label="Productos" data={data} onSelect={setSelected} />
+          </View>
+        </View>
+      </View>
+
+
 
       <Pressable style={style.btnStyle}
         onPress={() => alert('Disculpe, no disponible')}
@@ -25,43 +51,19 @@ const CustomerNewOrders = () => {
         <Text style={style.text}>Agregar Producto +</Text>
       </Pressable>
 
-      <View>
-        <View style={style.FilterProdcuts}>
-          <RadioButton
-            value="first"
-            status={checked === "first" ? "checked" : "unchecked"}
-            onPress={() => setChecked("first")}
-          />
-          <Text style={style.textTwo}>Nafta</Text>
-        </View>
-
-        <View style={style.FilterProdcuts}>
-          <RadioButton
-            value="second"
-            status={checked === "Second" ? "checked" : "unchecked"}
-            onPress={() => setChecked("second")}
-          />
-          <Text style={style.textTwo}>Diesel</Text>
-        </View>
-
-        <View style={style.FilterProdcuts}>
-          <RadioButton
-            value="third"
-            status={checked === "third" ? "checked" : "unchecked"}
-            onPress={() => setChecked("second")}
-          />
-          <Text style={style.textTwo}>Otros</Text>
-        </View>
+      <View
+        style={{ flexDirection: "row" }}
+      >
+        <TableCustomersOrder />
       </View>
 
-      <DropDown />
 
       <View style={{
         flexDirection: "row",
         justifyContent: "center"
       }}>
 
-        <View style={style.data}>
+        {/* <View style={style.data}>
           <View style={style.containerTextTwo}>
             <Text style={style.textTwoTitle}>Codigo/Authe: </Text>
             <Text style={style.textTwo}>8888888</Text>
@@ -71,7 +73,7 @@ const CustomerNewOrders = () => {
             <Text style={style.textTwoTitle}>Producto: </Text>
             <Text style={style.textTwo}>8888888</Text>
           </View>
-        </View>
+        </View> */}
       </View>
 
       <Pressable style={style.btnStyle}
@@ -133,6 +135,18 @@ const style = StyleSheet.create({
     letterSpacing: 0.25,
     color: "black",
     margin: 15
+  },
+  drop: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+  },
+  textInfo: {
+    textAlign: "center",
+    fontSize: 18,
+    marginTop: 20
   },
 
 

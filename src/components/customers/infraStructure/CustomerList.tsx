@@ -5,6 +5,7 @@ import CustomersClientTitle from '../../../core/CustomersClientTitle';
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../../../screens/RootStackPrams";
+import { getCustomers } from '../controllers/getCustomers';
 
 type customersListScreemProo = NativeStackNavigationProp<RootStackParamList, 'Clientes'>
 interface CustomersList {
@@ -23,12 +24,7 @@ const CustomerList = () => {
 
   useEffect(() => {
     const api = async () => {
-      const data = await fetch(
-        "https://jsonplaceholder.typicode.com/users/1/posts",
-        {
-          method: "GET",
-        }
-      );
+      const data = await getCustomers()
       const resp = await data.json();
       setResult(resp);
     };
