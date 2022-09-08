@@ -19,6 +19,7 @@ import {
   TextInput,
 } from "react-native";
 import { getDataProducts } from "../controllers/getDataPoducts";
+import { ScrollView } from "react-native-gesture-handler";
 
 interface CustomersList {
   id: number;
@@ -46,7 +47,7 @@ const Products = () => {
 
   return (
     <View>
-      <ProductTitle></ProductTitle>
+      <ProductTitle />
       <View>
         <SafeAreaView>
           <TextInput
@@ -58,9 +59,8 @@ const Products = () => {
         </SafeAreaView>
       </View>
 
-      <View
+      <View>
 
-      >
         <FlatList
           data={result}
           keyExtractor={(item) => item.id.toString()}
@@ -69,16 +69,29 @@ const Products = () => {
               style={style.containerImputText}
             >
               <Text
-                style={style.inputText}
-              >Producto: {item.title}
+                style={style.inputTextTitle}
+              >
+                Producto:
               </Text>
               <Text
                 style={style.inputText}
-              >Detalle: {item.body}
+              >
+                {item.title}
+              </Text>
+              <Text
+                style={style.inputTextTitle}
+              >
+                Detalle:
+              </Text>
+              <Text
+                style={style.inputText}
+              >
+                {item.body}
               </Text>
             </View>
           )}
         />
+
       </View>
     </View>
   );
@@ -90,14 +103,23 @@ const style = StyleSheet.create({
     marginLeft: 5,
     marginRight: 5,
     backgroundColor: `#dcdcdc`,
-
+    marginBottom: 5
+  },
+  inputTextTitle: {
+    fontSize: 18,
+    marginTop: 5,
+    fontWeight: 'bold',
+    marginRight: 5,
+    textAlign: "center"
   },
   inputText: {
     fontSize: 15,
     marginTop: 10,
     marginLeft: 5,
     marginRight: 5,
-    textAlign: "center"
+    textAlign: "center",
+    marginBottom: 5
+
   },
   input: {
     borderColor: "gray",
