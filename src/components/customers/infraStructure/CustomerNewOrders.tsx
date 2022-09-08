@@ -57,23 +57,10 @@ const CustomerNewOrders = () => {
         <TableCustomersOrder />
       </View>
 
-
       <View style={{
         flexDirection: "row",
         justifyContent: "center"
       }}>
-
-        {/* <View style={style.data}>
-          <View style={style.containerTextTwo}>
-            <Text style={style.textTwoTitle}>Codigo/Authe: </Text>
-            <Text style={style.textTwo}>8888888</Text>
-          </View>
-
-          <View style={style.containerTextTwo}>
-            <Text style={style.textTwoTitle}>Producto: </Text>
-            <Text style={style.textTwo}>8888888</Text>
-          </View>
-        </View> */}
       </View>
 
       <Pressable style={style.btnStyle}
