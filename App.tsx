@@ -11,6 +11,7 @@ import CustomerList from "./src/components/customers/infraStructure/CustomerList
 import 'react-native-gesture-handler';
 import Stock from "./src/components/products/infraestructure/Stock";
 import OrderDetail from "./src/components/orders/Infraestructure/OrderDetail";
+import Todo from './src/components/products/infraestructure/Todo'
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +28,7 @@ export default function App() {
         <Stack.Screen name="DetalleCliente" component={CustomerDetail} />
         <Stack.Screen name="NuevoPedido" component={CustomerNewOrders} />
         <Stack.Screen name="Stock" component={Stock} />
+        <Stack.Screen name="Todo" component={Todo} />
       </Stack.Navigator>
     </NavigationContainer>
   )

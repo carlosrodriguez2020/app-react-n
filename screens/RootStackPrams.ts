@@ -12,4 +12,5 @@ export type RootStackParamList = {
     Clientes:undefined;
 
     Stock:undefined;
+    Todo:undefined;
     };

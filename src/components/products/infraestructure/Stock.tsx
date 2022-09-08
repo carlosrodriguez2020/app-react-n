@@ -23,8 +23,6 @@ const Stock = () => {
     { label: 'Agroquimicos', value: '5' },
   ];
 
-
-
   const navigation = useNavigation<stockScrollScreem>()
 
   return (
@@ -84,7 +82,13 @@ const Stock = () => {
 
         >CONFIRMAR</Text>
       </Pressable>
+      <Pressable style={style.btnStyle}
+        onPress={() => navigation.navigate('Todo')}
+      >
+        <Text style={style.text}
 
+        >Todoo</Text>
+      </Pressable>
 
     </View>
   );

@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, Pressable } from "react-native";
 import TitleCustomersOrders from "../../../core/TitleCustomersOrders";
-import { RadioButton } from "react-native-paper";
 import DropDown from "../../../core/DropDown";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../../../screens/RootStackPrams";
-import DropdownSpanish from "../../../core/DropdownSpanish";
 import TableCustomersOrder from "../../../core/TableCustomersOders";
 
 type custoNewOrderScreemProp = NativeStackNavigationProp<RootStackParamList>
@@ -24,8 +22,6 @@ const CustomerNewOrders = () => {
 
   const navigation = useNavigation<custoNewOrderScreemProp>()
 
-
-
   return (
     <View style={{ padding: 20 }}>
       <TitleCustomersOrders />
@@ -42,8 +38,6 @@ const CustomerNewOrders = () => {
           </View>
         </View>
       </View>
-
-
 
       <Pressable style={style.btnStyle}
         onPress={() => alert('Disculpe, no disponible')}

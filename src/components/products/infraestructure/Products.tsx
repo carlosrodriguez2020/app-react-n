@@ -108,6 +108,7 @@ const style = StyleSheet.create({
   inputTextTitle: {
     fontSize: 18,
     marginTop: 5,
+    marginLeft: 5,
     fontWeight: 'bold',
     marginRight: 5,
     textAlign: "center"
