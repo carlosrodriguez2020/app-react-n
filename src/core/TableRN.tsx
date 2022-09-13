@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { FlatList } from 'react-native-gesture-handler';
+import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
+import { FlatList, ScrollView } from 'react-native-gesture-handler';
 
 
 interface DataTable {

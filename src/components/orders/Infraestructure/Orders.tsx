@@ -97,7 +97,7 @@ const style = StyleSheet.create({
     fontSize: 18,
     marginTop: 5,
     fontWeight: 'bold',
-    marginRight: 5
+    marginLeft: 10
   },
   inputText: {
     fontSize: 15,

@@ -17,7 +17,7 @@ const Home = () => {
     <View style={{ flex: 1, justifyContent: "center" }}>
       <View style={{ flexDirection: "row", justifyContent: "center" }}>
         <Image
-          source={require("../imgs/ypf.png")}
+          source={require("../imgs/logoAw.png")}
           style={{ width: 150, height: 150 }}
         />
       </View>

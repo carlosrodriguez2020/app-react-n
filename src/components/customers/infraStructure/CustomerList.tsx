@@ -66,8 +66,6 @@ const CustomerList = () => {
             >Detalle: {item.body}
             </Text>
 
-
-
             <View>
               <Pressable style={style.btnStyle}
                 onPress={() => navigation.navigate('DetalleCliente')}
@@ -109,7 +107,7 @@ const style = StyleSheet.create({
     fontSize: 18,
     marginTop: 5,
     fontWeight: 'bold',
-    marginRight: 5
+    marginLeft: 10
   },
   inputText: {
     fontSize: 15,

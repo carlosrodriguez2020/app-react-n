@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Pressable, StyleSheet, SafeAreaView, TextInput } from 'react-native';
+import { View, Text, Pressable, StyleSheet, SafeAreaView, TextInput, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../../../screens/RootStackPrams";
@@ -26,71 +26,82 @@ const Stock = () => {
   const navigation = useNavigation<stockScrollScreem>()
 
   return (
-    <View>
-      <StockTitle />
+    <KeyboardAvoidingView
+      behavior="padding"
+      style={{ flex: 1 }}
+    >
+      <TouchableWithoutFeedback
+        onPress={Keyboard.dismiss}
+      >
+        <View>
+          <StockTitle />
 
-      <View>
-        <View style={{ flexDirection: "row" }}>
-          <View style={style.drop}>
-            {!!selected && (
-              <Text style={style.textInfo}>
-                Seleccionaste :
-              </Text>
-            )}
-            <DropdownSpanish label="Productos" data={data} onSelect={setSelected} />
-          </View>
+          <View>
+            <View style={{ flexDirection: "row" }}>
+              <View style={style.drop}>
+                {!!selected && (
+                  <Text style={style.textInfo}>
+                    Seleccionaste :
+                  </Text>
+                )}
+                <DropdownSpanish label="Productos" data={data} onSelect={setSelected} />
+              </View>
 
-          <View style={style.data}>
-            <View style={style.containerTextTwo}>
-              <Text style={style.textTwoTitle}>Stock Disponible: </Text>
-              <Text style={style.textTwo}>8888888</Text>
+              <View style={style.data}>
+                <View style={style.containerTextTwo}>
+                  <Text style={style.textTwoTitle}>Stock Disponible: </Text>
+                  <Text style={style.textTwo}>8888888</Text>
+                </View>
+              </View>
             </View>
+
+            <Text style={style.textInfo}>
+              ¿Solicitar mas?
+            </Text>
+
+            <View >
+              <SafeAreaView>
+                <TextInput style={style.input} onChangeText={setText} value={text}
+                  keyboardType="number-pad"
+                  placeholder={"Ingrese su cantidad"}
+                />
+
+              </SafeAreaView>
+            </View>
+
           </View>
+
+          <Pressable style={style.btnStyle}
+            onPress={() => alert('Disculpe, no disponible')}
+
+          >
+            <Text style={style.text}>AGREGAR PRODUCTO</Text>
+          </Pressable>
+
+          <View
+            style={{ flexDirection: "row" }}
+          >
+            <TableRN />
+          </View>
+          <Pressable style={style.btnStyle}
+            onPress={() => alert('Disculpe, no disponible')}
+          >
+            <Text
+              style={style.text}
+            >CONFIRMAR</Text>
+          </Pressable>
+
+          {/* <Pressable
+            style={style.btnStyle}
+            onPress={() => navigation.navigate('Todo')}
+          >
+            <Text style={style.text}
+            >Todoo</Text>
+          </Pressable> */}
+
         </View>
-
-        <Text style={style.textInfo}>
-          ¿Solicitar mas?
-        </Text>
-
-        <View >
-          <SafeAreaView>
-            <TextInput style={style.input} onChangeText={setText} value={text}
-              keyboardType="number-pad"
-              placeholder={"Ingrese su cantidad"}
-            />
-
-          </SafeAreaView>
-        </View>
-
-      </View>
-
-      <Pressable style={style.btnStyle}
-        onPress={() => alert('Disculpe, no disponible')}
-
-      >
-        <Text style={style.text}>AGREGAR PRODUCTO</Text>
-      </Pressable>
-      <View
-        style={{ flexDirection: "row" }}
-      >
-        <TableRN />
-      </View>
-      <Pressable style={style.btnStyle}
-        onPress={() => alert('Disculpe, no disponible')}
-      >
-        <Text style={style.text}
-
-        >CONFIRMAR</Text>
-      </Pressable>
-      <Pressable style={style.btnStyle}
-        onPress={() => navigation.navigate('Todo')}
-      >
-        <Text style={style.text}
-
-        >Todoo</Text>
-      </Pressable>
-
-    </View>
+      </TouchableWithoutFeedback>
+    </KeyboardAvoidingView>
   );
 }
 const style = StyleSheet.create({
